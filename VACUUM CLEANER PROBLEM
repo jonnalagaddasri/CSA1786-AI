@@ -1,0 +1,33 @@
+class VacuumCleaner:
+    def _init_(self):
+        self.position = "A"
+        self.status = "Dirty"
+        
+    def clean(self):
+        print("Cleaning the current location:", self.position)
+        self.status = "Clean"
+        
+    def move(self, new_position):
+        print("Moving from", self.position, "to", new_position)
+        self.position = new_position
+        
+    def check_status(self):
+        print("Current position:", self.position)
+        print("Current status:", self.status)
+        
+def main():
+    vacuum = VacuumCleaner()
+    
+    while True:
+        vacuum.check_status()
+        vacuum.clean()
+        
+        next_move = input("Enter the next position (A or B) or 'exit' to quit: ").upper()
+        
+        if next_move == 'EXIT':
+            break
+        
+        vacuum.move(next_move)
+        
+if _name_ == "_main_":
+    main()
