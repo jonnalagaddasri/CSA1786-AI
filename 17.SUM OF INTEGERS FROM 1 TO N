@@ -1,0 +1,6 @@
+sum(0,0).
+sum(N,Result):-
+    N>0,
+    PrevN is N-1,
+    sum(PrevN,PrevResult),
+    Result is PrevResult+N.
