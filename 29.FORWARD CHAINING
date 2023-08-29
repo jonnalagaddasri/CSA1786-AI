@@ -1,0 +1,8 @@
+likes(john,pizza).
+likes(john,pasta).
+likes(susan,pizza).
+likes(mary,ice_cream).
+
+foodie(X) :- likes(X,pizza), likes(X,pasta).
+derived(X, Y) :- likes(X, Y).
+derived(X, Y) :- likes(X, Z), derived(Z,Y).
