@@ -1,0 +1,3 @@
+suggest_diet(diabetes, "For diabetes, include foods with low glycemic index.").
+suggest_diet(hypertension, "For hypertension, include foods low in sodium.").
+suggest_diet(_, "no diet recommendation for this disease consult the professional doctor.").
